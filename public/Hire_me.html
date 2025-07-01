@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hire Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    /* Section Styles */
+    .hire-section {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Header */
+    .hire-header {
+      background:red;
+      color: #fff;
+      padding: 20px;
+      border-radius: 6px 6px 0 0;
+      text-align: center;
+      margin: -40px -40px 30px -40px;
+    }
+    .hire-header h2 {
+      margin: 0;
+    }
+    .hire-header p {
+      margin: 5px 0 0 0;
+      font-size: 0.95em;
+    }
+
+    /* Form Grid */
+    .hire-form .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Labels */
+    .hire-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    /* Inputs, Selects, Textarea */
+   
+    .hire-form select{
+      width: 60%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1em;
+      background: #f9f9f9;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .hire-form input,
+    .hire-form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1em;
+      background: #f9f9f9;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .hire-form input:focus,
+    .hire-form select:focus,
+    .hire-form textarea:focus {
+      border-color:light red;
+      box-shadow: 0 0 0 3px rgba(92,107,192,0.2);
+      outline: none;
+    }
+
+    /* Button */
+    .hire-form .btn {
+      width: 100%;
+      background: #ff6699;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .hire-form .btn:hover {
+      background: #3f51b5;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="hire-me" class="hire-section">
+    <div class="hire-header">
+      <h2>Hire Me</h2>
+      <p>Let's discuss your project requirements</p>
+    </div>
+    <form id="hireForm" class="hire-form" action="api/hire" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required placeholder="123-456-7890">
+        </div>
+        <div class="form-group">
+          <label for="company">Company/Organization</label>
+          <input type="text" id="company" name="company" required placeholder="Your Company Name">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service" required>
+            <option value="">Select your service</option>
+            <option>Web Development</option>
+            <option>Mobile App Development</option>
+            <option>Data Analysis</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Estimated Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Select your budget range</option>
+            <option>Rs 500</option>
+            <option>Rs 500 – Rs 1000</option>
+            <option>Rs 1000 – Rs 5000</option>
+            <option>Rs 5000</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="timeline">Project Timeline</label>
+          <input type="text" id="timeline" name="timeline" placeholder="e.g., 4 weeks">
+        </div>
+        <div class="form-group">
+          <label for="contactMethod">Preferred Contact Method</label>
+          <select id="contactMethod" name="contactMethod">
+            <option value="">Select your preference</option>
+            <option>Email</option>
+            <option>Phone</option>
+            <option>WhatsApp</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Please describe your project and requirements..." required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  <script>
+document.getElementById("hireForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    company: document.getElementById("company").value,
+    service: document.getElementById("service").value,
+    budget: document.getElementById("budget").value,
+    timeline: document.getElementById("timeline").value,
+    contactMethod: document.getElementById("contactMethod").value,
+    message: document.getElementById("message").value
+  };
+
+  fetch("/api/hireme", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+  })
+  .catch(err => {
+    alert("Error submitting form.");
+    console.error("Error:", err);
+  });
+});
+</script>
+
+
+</body>
+</html>
+
+
+  

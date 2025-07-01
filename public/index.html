@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Welcome</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      background: linear-gradient(135deg, #b879d1 0%, #7c47b9 100%);
+      overflow-x: hidden;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1.5rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+    }
+
+    .title {
+      font-weight: 800;
+      font-size: 3.5rem;
+      text-shadow: 1px 2px 7px rgba(0,0,0,0.3);
+      line-height: 1.1;
+      user-select: none;
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 2.25rem;
+      }
+    }
+
+    .subtitle {
+      margin-top: 1rem;
+      font-weight: 300;
+      font-size: 1.125rem;
+      max-width: 480px;
+      text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+
+    .btn-explore {
+      margin-top: 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 0.75rem 2.5rem;
+      border-radius: 9999px;
+      background: transparent;
+      color: white;
+      font-weight: 700;
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    .btn-explore:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+    }
+
+    /* Circle bubble styles */
+    .bubble {
+      position: absolute;
+      background-color: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      filter: blur(12px);
+      animation: floatUp 15s ease-in-out infinite;
+      opacity: 0.7;
+    }
+
+    .bubble.small {
+      width: 40px;
+      height: 40px;
+      bottom: 10%;
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .bubble.medium {
+      width: 80px;
+      height: 80px;
+      bottom: 15%;
+      right: 18%;
+      animation-delay: 4s;
+    }
+
+    .bubble.large {
+      width: 130px;
+      height: 130px;
+      bottom: 5%;
+      left: 70%;
+      animation-delay: 2s;
+    }
+
+    .bubble.xlarge {
+      width: 200px;
+      height: 200px;
+      bottom: 0%;
+      right: 48%;
+      animation-delay: 6s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translateY(-20px) translateX(10px) scale(1.05);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.7;
+      }
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 8rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.7);
+      user-select: none;
+    }
+
+    .arrow-down {
+      display: block;
+      margin: 0.25rem auto 0;
+      width: 24px;
+      height: 24px;
+      border-left: 2px solid rgba(255,255,255,0.7);
+      border-bottom: 2px solid rgba(255,255,255,0.7);
+      transform: rotate(-45deg);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+      }
+      50% {
+        transform: translateY(8px) rotate(-45deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Welcome section of portfolio">
+    <h1 class="title">Welcome to my Portfolio</h1>
+    <p class="subtitle" aria-live="polite">Crafting digital experiences with passion and creativity</p>
+    <button class="btn-explore" aria-label="Explore my work section">Explore My Work</button>
+    <!-- background bubbles -->
+    <span class="bubble small" aria-hidden="true"></span>
+    <span class="bubble medium" aria-hidden="true"></span>
+    <span class="bubble large" aria-hidden="true"></span>
+    <span class="bubble xlarge" aria-hidden="true"></span>
+
+    <!-- scroll indicator -->
+    <a href="index1.html" class="scroll-indicator" aria-label="Scroll to discover">
+  Scroll to discover
+  <span class="arrow-down" aria-hidden="true"></span>
+</a>
+
+  </main>
+</body>
+</html>
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:#f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: #007BFF;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .container {
+      padding: 20px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .content {
+      background-color: white;
+      padding: 15px;
+      border-radius: 6px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .container::before {
+      content: " ";
+      position: absolute;
+      top: 22px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007BFF;
+      border: 3px solid #f4f4f4;
+      z-index: 1;
+    }
+
+    .left::before {
+      right: -10px;
+    }
+
+    .right::before {
+      left: -10px;
+    }
+
+    /* Adjustments for smaller screens */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .container::before {
+        left: 60px;
+      }
+      .right {
+        left: 0;
+      }
+    }
+  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <h2 style="text-align:center; margin-top:50px;">Education</h2>
+  <div class="timeline">
+
+   
+    <!-- Right: High School -->
+    <div class="container left">
+      <div class="content">
+        <h3>Shri Guru Ram Rai Public School</h3>
+        <p><strong>Qualification:</strong> High School</p>
+        <p><strong>Duration:</strong> 2019 - 2021</p>
+        <p><strong>Percentage :</strong>82%</p>
+        <p><strong>Details:</strong> Major in Science with a focus on Mathematics and Computer Applications.</p>
+      </div>
+    </div>
+
+
+
+    <div class="container right">
+      <div class="content">
+        <h3>Gagan Public School</h3>
+        <p><strong>Qualification:</strong> Senior Secondary</p>
+        <p><strong>Duration:</strong> 2021 - 2023</p>
+        <p><strong>Percentage:</strong> 75%</p>
+        <p><strong>Details:</strong> Major in PCM with a focus on Mathematics.</p>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Left: Bachelor's Degree -->
+    <div class="container left">
+      <div class="content">
+        <h3>GLA University</h3>
+        <p><strong>Degree:</strong> B.Tech in Computer Science</p>
+        <p><strong>Duration:</strong> 2021 - 2025</p>
+        <p><strong>CGPA:</strong> 7.9</p>
+        <p><strong>Details:</strong> Specialization in AI, ML, and IoT with consistent academic excellence.</p>
+      </div>
+    </div>
+</body>
+</html>

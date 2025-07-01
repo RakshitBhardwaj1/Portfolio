@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rakshit Bhardwaj - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Rakshit.Dev</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">My Skills</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+  <div class="hero-image">
+    <img src="Rakshit_image.png" alt="Rakshit Bhardwaj" />
+    
+  </div>
+  <div class="hero-text">
+  <h1 id="animatedName"></h1>
+  <p>Software Developer | AI & IoT Enthusiast</p>
+  <h2>From India</h2>
+  <p>I love building smart applications and solving real-world problems through technology.</p>
+  <div class="hero-buttons">
+    <a href="Rakshit_Resume.jpg" download class="btn">Download Resume</a>
+    <button id="hireMeBtn" class="btn">Hire Me</button>
+    <script>
+      document.getElementById("hireMeBtn").addEventListener("click", function() {
+        window.location.href = "Hire_me.html";
+      });
+    </script>
+  </div>
+</div>
+</section>
+
+
+
+
+  
+<section class="about" id="about">
+  <div class="about-content">
+    <div class="about-image">
+      <img src="Rakshit_new.jpg" alt="About Rakshit Bhardwaj"/>
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I'm Rakshit Bhardwaj, a passionate Software Developer with expertise in AI, Machine Learning, IoT, and Full Stack Development.
+        I love creating innovative solutions to real-world problems and continuously learning new technologies.
+      </p>
+      <p>
+        Apart from coding, I enjoy playing sports, exploring entrepreneurship ideas, and contributing to tech communities.
+        My journey in technology has been driven by a desire to make a positive impact through software.
+      </p>
+      <div class="about-box-links">
+        <button id="showExperience" class="link-box">Experience</button>
+        <button id="showEducation" class="link-box">Education</button>
+        <script>
+  document.getElementById("showEducation").addEventListener("click", function() {
+    window.location.href = "Education.html";
+  });
+</script>
+<script>
+  document.getElementById("showExperience").addEventListener("click", function() {
+    window.location.href = "Experience.html";
+  });
+</script>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="skills" id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">
+      <h3>HTML, CSS & JavaScript</h3>
+      <p>Building responsive and interactive web interfaces with modern standards.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Java Development</h3>
+      <p>Experience in building robust Java applications and solving problems.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Python & Machine Learning</h3>
+      <p>Developing machine learning models and automating tasks.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Data Science</h3>
+      <p>Data analysis, visualization, and prediction using Python libraries.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Data Analytics</h3>
+      <p>Analyzing complex datasets to drive business decisions.</p>
+    </div>
+    <div class="skill-card">
+      <h3>MongoDB</h3>
+      <p>Working with NoSQL databases for scalable applications.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Node.js & Express.js</h3>
+      <p>Building backend APIs and server-side logic.</p>
+    </div>
+    <div class="skill-card">
+      <h3>React</h3>
+      <p>Creating dynamic frontend applications with React.</p>
+    </div>
+    <div class="skill-card">
+      <h3>AI & IoT Integration</h3>
+      <p>Combining AI solutions with IoT devices for smart systems.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="projects" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-container">
+
+    <!-- Existing 3 main projects -->
+    <div class="project-card">
+      <img src="image.jpg" alt="Project 1" />
+      <h3>Smart Home Automation</h3>
+      <p>AI-powered smart home system to control appliances and improve energy efficiency.</p>
+      <a href="https://www.linkedin.com/posts/rakshit-bhardwaj-260978288_the-home-automation-alchemist-tech-activity-7171322349240143872-idCG?utm_source=share&utm_medium=member_desktop" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="Flite.jpg" alt="Project 2" />
+      <h3>Aircraft Fuel Consumption Predictor</h3>
+      <p>Predicting fuel needs before takeoff! Created an AI-powered Aircraft Fuel Consumption Predictor.</p>
+      <a href="https://www.linkedin.com/posts/rakshit-bhardwaj-260978288_machinelearning-datascience-streamlit-activity-7245601707294932992-F-Av?utm_source=share&utm_medium=member_desktop" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="Lastmile.jpg" alt="Project 3" />
+      <h3>DeliverSmart: Remote Logistics</h3>
+      <p>Analyzed remote delivery costs to improve efficiency and reduce expenses in last-mile logistics networks.</p>
+      <a href="https://github.com/RakshitBhardwaj1/Excel-Project" class="btn">View Project</a>
+    </div>
+
+  </div>
+
+  <!-- Hidden Upcoming Projects -->
+  <div class="projects-container upcoming-projects" style="display: none; margin-top: 30px;">
+
+    <div class="project-card">
+      <img src="ThreatFusionAI.jpg" alt="Project 4" />
+      <h3>ThreatFusionAI</h3>
+      <p>An AI-powered threat intelligence system that aggregates and analyzes cybersecurity threats in real time to help organizations proactively mitigate risks.</p>
+      <a href="#" class="btn">Coming Soon</a>
+    </div>
+
+    <div class="project-card">
+      <img src="Feedbot.jpg" alt="Project 5" />
+      <h3>FeedBot</h3>
+      <p>Real-time feedback and engagement analysis tool using facial expression recognition and attention tracking.</p>
+      <a href="#" class="btn">Coming Soon</a>
+    </div>
+
+    <!-- New Upcoming Project 2 -->
+    <div class="project-card">
+      <img src="Rubik_cube.webp" alt="Project 6" />
+      <h3>Rubik's Cube Solver</h3>
+      <p>AI-powered app to solve a Rubik's Cube by capturing pictures from different angles and suggesting optimal moves.</p>
+      <a href="#" class="btn">Coming Soon</a>
+    </div>
+
+  </div>
+
+  <button id="toggleUpcomingProjects" class="btn" style="margin-top: 30px;">Show Upcoming Projects</button>
+</section>
+
+
+
+
+
+
+<!-- Services Section -->
+<section class="services" id="services">
+  <h2 class="section-title">Services</h2>
+  <div class="services-container">
+
+    <div class="service-card">
+      <h3>Web Development</h3>
+      <p>I build responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and frameworks.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>AI & ML Solutions</h3>
+      <p>Customized machine learning models and AI applications to solve real-world problems efficiently.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>IoT Integration</h3>
+      <p>Developing IoT systems to connect devices seamlessly and automate processes intelligently.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Data Analysis</h3>
+      <p>Analyzing large datasets to uncover insights and drive strategic decisions for businesses.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Full Stack Development</h3>
+      <p>Building complete end-to-end web applications, including frontend interfaces and backend APIs.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Certificate Section -->
+
+<section class="certificates" id="certificates">
+  <h2 class="section-title">Certificates</h2>
+  <div class="certificate-container">
+
+    <!-- First 3 Certificates -->
+    <div class="certificate-card">
+      <img src="cert1.jpg" alt="Certificate 1">
+      <h3>NPTEL</h3>
+      <p>IIT Kharagpur</p>
+      <a href="LINK1" class="btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="cert2.jpg" alt="Certificate 2">
+      <h3>WordPress</h3>
+      <p>Coursera</p>
+      <a href="LINK2" class="btn" target="_blank">View Certificate</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="cert3.jpg" alt="Certificate 3">
+      <h3>Microsoft Excel</h3>
+      <p>Coursera</p>
+      <a href="LINK3" class="btn" target="_blank">View Certificate</a>
+    </div>
+
+  </div>
+
+  <button id="viewMoreBtn" class="btn" style="margin-top: 30px;">View More Certificates</button>
+
+  <!-- Hidden Certificates -->
+  <div class="certificate-container hidden-certificates" style="display: none; margin-top:30px;">
+    <div class="certificate-card">
+      <img src="cert4.jpg" alt="Certificate 4">
+      <h3>Master Array and Problem Solving</h3>
+      <p>SoarX</p>
+      <a href="LINK4" class="btn" target="_blank">View Certificate</a>
+    </div>
+    <div class="certificate-card">
+      <img src="cert5.jpg" alt="Certificate 5">
+      <h3>Python (Basics)</h3>
+      <p>HackerRank</p>
+      <a href="LINK5" class="btn" target="_blank">View Certificate</a>
+    </div>
+    <div class="certificate-card">
+      <img src="cert6.jpg" alt="Certificate 6">
+      <h3>Basics of Python</h3>
+      <p>Infosys Springboard</p>
+      <a href="LINK6" class="btn" target="_blank">View Certificate</a>
+    </div>
+    <!-- Add remaining certificates here -->
+    <div class="certificate-card">
+      <img src="cert7.jpg" alt="Certificate 7">
+      <h3>Introduction to Python</h3>
+      <p>Infosys Springboard</p>
+      <a href="LINK7" class="btn" target="_blank">View Certificate</a>
+
+  </div>
+    <div class="certificate-card">
+      <img src="cert8.jpg" alt="Certificate 8">
+      <h3>Tech Expo Exhibition</h3>
+      <p>GLA University</p>
+      <a href="LINK8" class="btn" target="_blank">View Certificate</a>
+    </div>
+    <div class="certificate-card">
+      <img src="cert9.jpg" alt="Certificate 9">
+      <h3>Data Analytics MicroInternship</h3>
+      <p>SkillCred</p>
+      <a href="LINK9" class="btn" target="_blank">View Certificate</a>
+    </div>
+    <div class="certificate-card">
+      <img src="cert10.jpg" alt="Certificate 10">
+      <h3>Internship Completion</h3>
+      <p>Hunar Intern</p>
+      <a href="LINK10" class="btn" target="_blank">View Certificate</a>
+    </div>
+    <div class="certificate-card">
+      <img src="cert11.jpg" alt="Certificate 11">
+      <h3>Project Completion</h3>
+      <p>SkillCred</p>
+      <a href="LINK11" class="btn" target="_blank">View Certificate</a>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <div class="contact-container">
+    <form id="contactForm" class="contact-form" action="/api/contact" method="post">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <p><strong>Email:</strong> rakshitbhardwaj805@gmail.com</p>
+      <p><strong>Location:</strong> Aligarh</p>
+      <div class="social-icons">
+        <a href="https://github.com/RakshitBhardwaj1" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rakshit-bhardwaj-260978288/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/rakshitbhardwaj75" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/8923790985" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/Rakshit Bhardwaj" target="_blank"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <footer style="background: #222; color: #fff; text-align: center; padding: 20px 0; font-size: 1rem;">
+    <p>&copy; 2023 Rakshit Bhardwaj. All rights reserved.</p>
+    <p>Designed with Love by Rakshit</p>
+
+
+
+<script>
+  const viewMoreBtn = document.getElementById('viewMoreBtn');
+  const hiddenCertificates = document.querySelector('.hidden-certificates');
+  let isVisible = false;
+
+  viewMoreBtn.addEventListener('click', () => {
+    if (!isVisible) {
+      hiddenCertificates.style.display = 'grid';
+      viewMoreBtn.textContent = 'View Less';
+      isVisible = true;
+    } else {
+      hiddenCertificates.style.display = 'none';
+      viewMoreBtn.textContent = 'View More Certificates';
+      isVisible = false;
+    }
+  });
+</script>
+
+<script>
+const line1 = ["Hi", "I'm"];
+const line2 = ["Rakshit", "Bhardwaj"];
+const animatedName = document.getElementById("animatedName");
+
+// Initialize first line container
+animatedName.innerHTML = `<div id="line1"></div><div id="line2"></div>`;
+
+let index1 = 0;
+let index2 = 0;
+
+function typeLine1() {
+  if (index1 < line1.length) {
+    document.getElementById("line1").innerHTML += `<span style="color:white">${line1[index1]}</span> `;
+    index1++;
+    setTimeout(typeLine1, 400); // speed of first line
+  } else {
+    setTimeout(typeLine2, 500); // wait before second line starts
+  }
+}
+
+function typeLine2() {
+  if (index2 < line2.length) {
+    document.getElementById("line2").innerHTML += `<span style="color:#ff3366">${line2[index2]}</span> `;
+    index2++;
+    setTimeout(typeLine2, 500); // speed of second line
+  }
+}
+
+typeLine1();
+</script>
+<script>
+const toggleBtn = document.getElementById('toggleUpcomingProjects');
+const upcomingProjects = document.querySelector('.upcoming-projects');
+let showing = false;
+
+toggleBtn.addEventListener('click', () => {
+  if (!showing) {
+    upcomingProjects.style.display = 'flex';
+    toggleBtn.textContent = 'Hide Upcoming Projects';
+    showing = true;
+  } else {
+    upcomingProjects.style.display = 'none';
+    toggleBtn.textContent = 'Show Upcoming Projects';
+    showing = false;
+  }
+});
+</script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: document.querySelector('input[name="name"]').value,
+    email: document.querySelector('input[name="email"]').value,
+    subject: document.querySelector('input[name="subject"]').value,
+    message: document.querySelector('textarea[name="message"]').value
+  };
+
+  fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+  })
+  .catch(err => {
+    alert("Error submitting form.");
+  });
+});
+</script>
+ 
+</body>
+</html>

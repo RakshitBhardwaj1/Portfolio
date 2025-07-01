@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timeline Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background-color: #007BFF;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .container {
+      padding: 20px 30px;
+      position: relative;
+      width: 50%;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .content {
+      background-color: white;
+      padding: 15px;
+      border-radius: 6px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .container::before {
+      content: " ";
+      position: absolute;
+      top: 22px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #007BFF;
+      border: 3px solid #f4f4f4;
+      z-index: 1;
+    }
+
+    .left::before {
+      right: -10px;
+    }
+
+    .right::before {
+      left: -10px;
+    }
+
+    /* Adjustments for smaller screens */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .container::before {
+        left: 60px;
+      }
+      .right {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Experience Section -->
+  <h2 style="text-align:center;">Experience</h2>
+  <div class="timeline">
+
+    <!-- Left: Skill Cred -->
+    <div class="container left">
+      <div class="content">
+        <h3>Skill Cred</h3>
+        <p><strong>Role:</strong> Data Analyst Intern</p>
+        <p><strong>Duration:</strong> Jan 2024 - Apr 2024</p>
+        <p><strong>Details:</strong> I made a dashboard along with all the required spreadsheets or models used to
+build the project. Additionally, I created an ‘ODA Analysis Report’ to inform
+leadership about the current situation regarding payments. This report can
+highlight the money that could have been saved if the baseline process had
+been followed on the ground.
+Skills used - Excel,Power BI,Power Bi Analyst.</p>
+      </div>
+    </div>
+
+    <!-- Right: Hunor Intern -->
+    <div class="container right">
+      <div class="content">
+        <h3>Hunor Intern</h3>
+        <p><strong>Role:</strong> Data Science Intern</p>
+        <p><strong>Duration:</strong> May 2024 - Aug 2024</p>
+        <p><strong>Details:</strong> Developed predictive models and automated data pipelines for client projects.</p>
+      </div>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
