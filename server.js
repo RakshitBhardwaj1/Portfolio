@@ -102,7 +102,7 @@ app.get("/", (req, res) => {
 });
 
 // 1️⃣1️⃣ Start Server
-const PORT = process.env.Backend_URL;
-app.listen(Backend_URL, () => {
-  console.log(`🚀 Server running on port ${Backend_URL}`);
+const PORT = process.env.port || 5000;
+app.listen(port, () => {
+  console.log(`🚀 Server running on port ${port}`);
 });
