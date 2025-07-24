@@ -14,19 +14,21 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="logo">Rakshit.Dev</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">My Skills</a></li>
-        <li><a href="#projects">My Projects</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo">Rakshit.Dev</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">My Skills</a></li>
+      <li><a href="#projects">My Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -468,6 +470,12 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   });
 });
 </script>
- 
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>

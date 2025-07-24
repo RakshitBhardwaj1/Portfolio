@@ -53,31 +53,67 @@ body::after {
   transition: color 0.3s ease;
   }
 
-  header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #000; /* Or your desired dark color */
-  color: #fff;
-  z-index: 1000;
+  /* Header styling */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  padding: 20px;
+  background-color: #0a0a0a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Navigation links */
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 20px;
-  list-style: none;
 }
 
 .nav-links li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
+
+/* Toggle menu - only visible on mobile */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #111;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 
 .nav-links li a:hover {
   color: #ff3366; /* Purple hover color */
@@ -87,32 +123,37 @@ body::after {
 
 
 /* Hero Section */
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-direction: row; /* Image left, text right */
-  padding: 50px 100px;
+  align-items: flex-start;  /* ✅ Align image and text to top */
+  flex-direction: row;
+  padding: 40px 60px;       /* ✅ Reduce top/side padding */
   min-height: 80vh;
-  margin-top: 60px;
+  margin-top: 20px;
+  gap: 40px;
 }
 
 
 .hero-image {
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* Image aligned to left */
-  margin-left: -50px; /* Adjust as needed to align with text */
-  align-items: center;
+  justify-content: flex-start; /* ✅ Force image to left */
+  align-items: flex-start;     /* ✅ Align image to top */
+  padding-left: 0;             /* ✅ No extra left space */
+  margin: 0;                   /* ✅ Remove top margin */
 }
 
 .hero-image img {
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0;            /* ✅ Remove rounded corners */
+  box-shadow: none;           /* ✅ Remove shadow box */
+  transition: transform 0.4s ease;
   cursor: pointer;
 }
+
 
 .hero-image img:hover {
   transform: scale(1.05) rotate(3deg);
@@ -123,8 +164,8 @@ body::after {
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-right: -100px; /* Adjust as needed */
   justify-content: center;
+  text-align: left;
 }
 
 .hero-text h1 {
@@ -151,7 +192,9 @@ body::after {
 .hero-buttons {
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: flex-start;
 }
 
 .hero-buttons .btn,
@@ -172,16 +215,36 @@ body::after {
   background-color: #ff6699;
 }
 
-/* Responsive */
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    padding: 40px 20px;
     text-align: center;
   }
-  .hero-image, .hero-text {
+
+  .hero-text {
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
     justify-content: center;
   }
 }
+
 
 
 
@@ -294,6 +357,7 @@ body::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  justify-items: center;
 }
 
 /* Individual Project Card */
