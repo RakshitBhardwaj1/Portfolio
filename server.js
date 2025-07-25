@@ -11,7 +11,12 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: "https://rakshitportfolio-1.vercel.app", // your Vercel frontend domain
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 
 // 3️⃣ Serve Static Files
 app.use(express.static(path.join(__dirname, "public")));
