@@ -68,21 +68,26 @@ const HireMeSchema = new mongoose.Schema({
 const HireMe = mongoose.model("HireMe", HireMeSchema, "hiremes");
 
 // 8️⃣ Contact Form Route
-app.post("/api/contact", async (req, res) => {
+app.post('/api/contact', async (req, res) => {
   try {
-    const formData = req.body;
-    console.log("Received Contact form data:", formData);
+    const { name, email, subject, message } = req.body;
 
-    const newContact = new Contact(formData);
-    const savedContact = await newContact.save();
-    console.log("Contact saved to MongoDB:", savedContact);
+    // Validate fields
+    if (!name || !email || !message) {
+      return res.status(400).json({ message: 'All required fields must be filled.' });
+    }
 
-    res.status(200).json({ message: "Contact form submitted successfully!" });
-  } catch (error) {
-    console.error("Contact form error:", error);
-    res.status(500).json({ message: "Server error." });
+    // Save to DB (assuming you have a model)
+    const newMessage = new Contact({ name, email, subject, message });
+    await newMessage.save();
+
+    res.status(200).json({ message: 'Message sent successfully!' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error. Please try again later.' });
   }
 });
+
 
 // 9️⃣ Hire Me Form Route
 app.post("/api/hireme", async (req, res) => {
